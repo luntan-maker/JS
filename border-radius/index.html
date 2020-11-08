@@ -1,0 +1,66 @@
+<html>
+<style type="text/css">
+body {
+	margin:10px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif
+}
+
+#box1{
+	width:200px;
+	height:200px;
+	margin:10px;
+	padding:10px;
+}
+
+#box1 {
+	background:#c00;
+}
+
+</style>
+<body>
+  <div id="box1">
+  </div>
+  <form>
+    <label for="val1">Radius: </label>
+    <input type="text" id="fname" name="fname">
+    <label for="val2">TopLeft: </label>
+    <input type="text" id="fname2" name="fname2">
+    <label for="val3">TopRight: </label>
+    <input type="text" id="fname3" name="fname3">
+    <label for="val4">BottomRight: </label>
+    <input type="text" id="fname4" name="fname4">
+    <label for="val5">BottomLeft: </label>
+    <input type="text" id="fname5" name="fname5">
+  </form>
+  <button class="button" onclick="changeVal()">Implement values!</button>
+  <br>
+
+  <input type="text" value="Hello world" id="myInput">
+  <button class="button" onclick="copyVal()">Copy text</button>
+  <script>
+  function copyVal(){
+    var copyText = document.getElementById("myInput");
+    copyText.select();
+    copyText.setSelectionRange(0,99999);
+    document.execCommand("copy");
+    alert("Copied the text: " + copyText.value);
+  }
+  function changeVal(){
+    theSquare = document.getElementById("box1")
+    // document.getElementById("fname").value = "a;sldkfj";
+    theSquare.style.background = "blue";
+    const val1 = document.getElementById("fname2").value;//+"px";
+    const val2 = document.getElementById("fname3").value;//+"px";
+    const val3 = document.getElementById("fname4").value;//+"px";
+    const val4 = document.getElementById("fname5").value;//+"px";
+    theSquare.style.borderTopLeftRadius = val1;
+    theSquare.style.borderTopRightRadius  = val2;
+    theSquare.style.borderBottomRightRadius = val3;
+    theSquare.style.borderBottomLeftRadius = val4;
+    // theSquare.style.borderRadius = document.getElementById("fname").value+"px";
+    var copyText = document.getElementById("myInput");
+    copyText.value = "border-radius: " +val1 +" " + val2 + " " + val3+ " " + val4;
+  }
+  </script>
+</body>
+</html>
