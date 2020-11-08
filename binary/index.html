@@ -1,0 +1,35 @@
+
+<!-- <head>
+  <script src="https://unpkg.com/browse/babel-standalone@6.26.0/"></script>
+</head> -->
+<html>
+  <body>
+    <form action="" method="get" class="form-example">
+      <div class="form-example">
+        <label for="binary">Enter a binary input: </label>
+        <input type="text" name="binary" id="binary" maxlength="8" required>
+      </div>
+
+      <div class="form-example">
+        <label for="decimal">Decimal Value: </label>
+        <input type="text" name="decimal" id="decimal" required>
+
+      </div>
+
+      <button type="button" name="toDecimal" onclick="convertBinary()">Convert</button>
+
+      <script>
+      function convertBinary(){
+        var binaryValue = document.getElementById("binary").value;
+        var decimalValue = parseInt(binaryValue, 2);
+        if (isNaN(decimalValue)){
+          document.getElementById("decimal").value = "Not a decimal number"
+        }
+        else{
+          document.getElementById("decimal").value = decimalValue
+        }
+      }
+      </script>
+    </form>
+  </body>
+</html>
