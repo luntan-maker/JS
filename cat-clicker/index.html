@@ -1,0 +1,55 @@
+<html>
+<style>
+  .sidenav{
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+</style>
+  <body>
+    <div class="sidenav">
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Client</a>
+    </div>
+    <div class="main">
+      <label id="catname1"></label>
+      <br>
+      <img id='my-elem' src="unnamed.jpg" alt="Cat pic">
+      <label id="Counter">0</label>
+      <br>
+      <br>
+      <label id="catname2"></label>
+      <br>
+      <img id='my-elem2' src="unnamed2.jpg" alt="Cat2 pic">
+      <label id="Counter2">0</label>
+    </div>
+    <script>
+
+        var elem = document.getElementById('my-elem');
+        document.getElementById("catname1").innerHTML = "Bob";
+
+        elem.addEventListener('click', function(){
+        document.getElementById('Counter').innerHTML = parseInt(document.getElementById('Counter').innerHTML)+1
+        console.log(document.getElementById('Counter').innerHTML)
+      })
+
+
+      var elem = document.getElementById('my-elem2');
+      document.getElementById("catname2").innerHTML = "fred";
+
+        elem.addEventListener('click', function(){
+        document.getElementById('Counter2').innerHTML = parseInt(document.getElementById('Counter2').innerHTML)+1
+        console.log(document.getElementById('Counter2').innerHTML)
+      })
+
+
+    </script>
+  </body>
+</html>
